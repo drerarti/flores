@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Amarilla Preferida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            color: #333;
+        }
+
+        h1 {
+            color: #FFD700;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #FFD700;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #E6BE00;
+        }
+
+        /* Estilo para la tarjeta emergente */
+        .card {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 2px solid #FFD700;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .card p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .card .close-btn {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #FFD700;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .card .close-btn:hover {
+            background-color: #E6BE00;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Reproductor de música de fondo -->
+<audio autoplay loop>
+    <source src="cancion.m4a" type="audio/mpeg">
+    Tu navegador no soporta la reproducción de audio.
+</audio>
+
+<div class="container">
+    <h1>Para Mi divorciada Preferida XD</h1>
+    <img src="flor.png" alt="Ramo de flores amarillas">
+    <p>
+        Estas flores son tan brillantes y hermosas como la luz que traes. 
+        No hay mejor manera de decirte lo especial que eres para todos que con estas flores amarillas.
+    </p>
+    <a href="#" class="btn" id="receiveBtn">Recibe este detalle</a>
+</div>
+
+<!-- Tarjeta emergente -->
+<div class="card" id="popupCard">
+    <p>Con todo mi cariño y aprecio. Eres un sol, una fuente de inspiración. Gracias por estar existir.</p>
+    <button class="close-btn" id="closeBtn">Cerrar</button>
+</div>
+
+<script>
+    // Mostrar la tarjeta al hacer clic en el botón
+    document.getElementById('receiveBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('popupCard').style.display = 'block';
+    });
+
+    // Cerrar la tarjeta al hacer clic en el botón de cerrar
+    document.getElementById('closeBtn').addEventListener('click', function() {
+        document.getElementById('popupCard').style.display = 'none';
+    });
+</script>
+
+</body>
+</html>
